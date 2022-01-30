@@ -99,6 +99,10 @@ ul.ul-main3 {
   opacity: 0.8;
   font-size: 15px;
 }
+#search-form {
+  border-radius: 50%;
+  border-width: 0.5px;
+}
 
 #current-button {
   font-family: Arial, Helvetica, sans-serif;
