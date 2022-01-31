@@ -1,11 +1,11 @@
 /** @format */
 
 .div-about {
-  margin: 0 auto;
-  font-family: "Fredericka the Great", cursive;
-  font-size: 10px;
+  margin: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
   text-align: center;
-  padding: 5px 10px;
+  padding: 5px 10px 15px;
 }
 .monet {
   font-size: 7px;
@@ -17,9 +17,15 @@
 .container {
   border: 1px solid #606470;
   padding: 15px;
-  margin: 80px 40px 80px 100px;
+  margin: 80px 100px;
 
   border-radius: 16px;
+  max-width: 800px;
+}
+div.container-2,
+div.container-3 {
+  max-width: 700px;
+  max-height: 300px;
 }
 
 .enter {
@@ -32,8 +38,9 @@ ul {
   margin: 0;
   padding: 0;
 }
-ul.ul-main3 {
-  padding: 40px 180px;
+#four-info {
+  padding: 20px;
+  text-align: left;
 }
 
 .li-city {
@@ -84,7 +91,7 @@ ul.ul-main3 {
 .ul-main3 {
   font-size: 16px;
   margin: 0 auto;
-  padding: 20px 180px;
+  padding: 20px 80px;
 }
 
 .card {
@@ -121,7 +128,8 @@ ul.ul-main3 {
   font-size: 15px;
 }
 .github-link {
-  font-size: 10px;
+  font-size: 12px;
   font-family: Arial, Helvetica, sans-serif;
   padding-left: 20px;
+  padding-bottom: 15px;
 }
