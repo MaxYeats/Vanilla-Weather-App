@@ -26,6 +26,7 @@ div.container-2,
 div.container-3 {
   max-width: 700px;
   max-height: 300px;
+  padding: 5px 10px;
 }
 
 .enter {
