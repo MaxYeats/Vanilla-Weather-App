@@ -26,7 +26,7 @@
 
 #icon {
   display: block;
-  margin: 0 20px;
+  margin: 0 40px 0;
   max-width: 200px;
   max-height: auto;
 }
@@ -62,7 +62,7 @@ ul {
 
 .li-city {
   font-family: "Fredericka the Great", cursive;
-  font-size: 70px;
+  font-size: 65px;
   opacity: 0.6;
   padding: 0 28px;
   text-align: left;
