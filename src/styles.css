@@ -66,6 +66,7 @@ ul {
   opacity: 0.6;
   padding: 0 28px;
   text-align: left;
+  display: block;
 }
 .li-date,
 .li-time {
@@ -74,6 +75,7 @@ ul {
   text-align: left;
   opacity: 0.8;
   padding: 0 28px;
+  display: block;
 }
 
 .ul-main1,
