@@ -337,6 +337,12 @@ function convertToFahrenheit(event) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=${apiKey}`;
   axios.get(apiUrl).then(showTemperature);
   function showTemperature(response) {
+    let icon = response.data.weather[0].icon;
+    let iconElement = document.querySelector("#icon");
+    iconElement.setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${icon}@2x.png`
+    );
     let temperature = Math.round(response.data.main.temp);
     let tempFahrenheit = document.querySelector("#temp-celsius");
     tempFahrenheit.innerHTML = temperature;
