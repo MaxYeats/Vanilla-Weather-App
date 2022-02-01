@@ -87,6 +87,7 @@ ul {
 .li-descript {
   text-align: center;
   font-size: 20px;
+  text-transform: capitalize;
 }
 
 .ul-main3 {
