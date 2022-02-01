@@ -7,6 +7,9 @@ let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${
 axios.get(apiUrl).then(showTemperature);
 
 function showTemperature(response) {
+  let icon = response.data.weather[0].icon;
+  let iconElement = document.querySelector("#icon");
+  iconElement.innerHTML = icon;
   let temperature = Math.round(response.data.main.temp);
   let tempCelsius = document.querySelector("#temp-celsius");
   tempCelsius.innerHTML = temperature;
