@@ -27,8 +27,7 @@
 #icon {
   display: block;
   margin: 0 40px 0 0;
-  max-width: 200px;
-  max-height: auto;
+  font-size: larger;
 }
 .container {
   border: 1px solid #606470;
@@ -64,9 +63,8 @@ ul {
   font-family: "Fredericka the Great", cursive;
   font-size: 65px;
   opacity: 0.6;
-  padding: 0 28px;
+  padding: 0 0 0 28px;
   text-align: left;
-  display: block;
 }
 .li-date,
 .li-time {
@@ -75,7 +73,6 @@ ul {
   text-align: left;
   opacity: 0.8;
   padding: 0 28px;
-  display: block;
 }
 
 .ul-main1,
