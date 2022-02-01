@@ -9,7 +9,10 @@ axios.get(apiUrl).then(showTemperature);
 function showTemperature(response) {
   let icon = response.data.weather[0].icon;
   let iconElement = document.querySelector("#icon");
-  iconElement.innerHTML = icon;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${icon}@2x.png`
+  );
   let temperature = Math.round(response.data.main.temp);
   let tempCelsius = document.querySelector("#temp-celsius");
   tempCelsius.innerHTML = temperature;
