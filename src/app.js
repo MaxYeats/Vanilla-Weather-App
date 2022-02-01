@@ -1,6 +1,6 @@
 /** @format */
 
-let city = "Santos";
+let city = "New York";
 let apiKey = "017e2b9ce8d67142382f8330fbc647cf";
 let unit = "metric";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=${apiKey}`;
@@ -107,6 +107,12 @@ function findCity(event) {
   axios.get(apiUrl).then(showTemperature);
 
   function showTemperature(response) {
+    let icon = response.data.weather[0].icon;
+    let iconElement = document.querySelector("#icon");
+    iconElement.setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${icon}@2x.png`
+    );
     let temperature = Math.round(response.data.main.temp);
     let tempCelsius = document.querySelector("#temp-celsius");
     tempCelsius.innerHTML = temperature;
@@ -231,6 +237,12 @@ function showPosition(position) {
     let citylocation = response.data.name;
     let currentcity = document.querySelector("li.li-city");
     currentcity.innerHTML = citylocation;
+    let icon = response.data.weather[0].icon;
+    let iconElement = document.querySelector("#icon");
+    iconElement.setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${icon}@2x.png`
+    );
     let temperature = Math.round(response.data.main.temp);
     let tempCelsius = document.querySelector("#temp-celsius");
     tempCelsius.innerHTML = temperature;
