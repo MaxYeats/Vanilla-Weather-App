@@ -1,6 +1,6 @@
 /** @format */
 
-let city = "New York";
+let city = "Santos";
 let apiKey = "017e2b9ce8d67142382f8330fbc647cf";
 let unit = "metric";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=${apiKey}`;
