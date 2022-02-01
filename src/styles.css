@@ -1,11 +1,34 @@
 /** @format */
+#search-form {
+  padding-bottom: 2px;
+}
 
-.monet {
-  font-size: 7px;
+#search-input {
+  border-radius: 2%;
+  border-width: 0.5px;
+  font-style: italic;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+#current-button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
   border-width: 1px;
+  padding: 2px 6px;
+  border-radius: 7%;
+}
+#search-button {
+  border-width: 1px;
+  padding: 2px 6px;
+  border-radius: 7%;
+  font-size: 15px;
+}
+
+#icon {
   display: block;
-  margin: 0 auto 15px;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: auto;
 }
 .container {
   border: 1px solid #606470;
@@ -102,29 +125,13 @@ ul {
   opacity: 0.8;
   font-size: 15px;
 }
-#search-form {
-  padding-bottom: 2px;
-}
 
-#search-input {
-  border-radius: 2%;
-  border-width: 0.5px;
-  font-style: italic;
+.monet {
+  font-size: 7px;
   font-family: Arial, Helvetica, sans-serif;
-}
-
-#current-button {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
   border-width: 1px;
-  padding: 2px 6px;
-  border-radius: 7%;
-}
-#search-button {
-  border-width: 1px;
-  padding: 2px 6px;
-  border-radius: 7%;
-  font-size: 15px;
+  display: block;
+  margin: 0 auto 15px;
 }
 .github-link {
   font-size: 12px;
