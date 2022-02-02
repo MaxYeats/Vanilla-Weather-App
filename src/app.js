@@ -13,7 +13,6 @@ function showTemperature(response) {
     "src",
     `http://openweathermap.org/img/wn/${icon}@2x.png`
   );
-  iconElement.setAttribute("alt", response.data.weather[0].description);
   let temperature = Math.round(response.data.main.temp);
   let tempCelsius = document.querySelector("#temp-celsius");
   tempCelsius.innerHTML = temperature;
