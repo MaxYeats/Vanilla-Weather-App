@@ -1,6 +1,7 @@
 /** @format */
 #search-form {
   padding-bottom: 2px;
+  padding-left: 26px;
 }
 
 #search-input {
@@ -23,13 +24,13 @@
   border-radius: 7%;
   font-size: 15px;
 }
-#main-column {
-  margin: 0 auto;
-  padding: 0 5px 0 20px;
+div.container-1 {
+  max-height: 120px;
 }
 
 #icon {
-  margin: 0 50px 0 0;
+  margin: 0 20px 20px 0;
+  zoom: 120%;
 }
 .container {
   border: 1px solid #606470;
@@ -42,8 +43,16 @@
 div.container-2,
 div.container-3 {
   max-width: 700px;
-  max-height: 300px;
-  padding: 5px 10px;
+  max-height: 180px;
+  padding: 25px 20px;
+  margin: 0;
+}
+
+div.container-3 {
+  max-width: 700px;
+  max-height: 180px;
+  padding: 20px;
+  margin: 0;
 }
 
 .enter {
@@ -65,22 +74,27 @@ ul {
   font-family: "Fredericka the Great", cursive;
   font-size: 65px;
   opacity: 0.6;
-  padding: 0 0 0 28px;
+  padding: 0 0 0 30px;
   text-align: left;
+  margin-bottom: 0;
+  max-height: 90px;
 }
 .li-date,
 .li-time {
   font-family: "Fredericka the Great", cursive;
-  font-size: 20px;
+  font-size: 18px;
   text-align: left;
   opacity: 0.8;
-  padding: 0 28px;
+  padding: 0 30px;
 }
 
 .ul-main1,
 .ul-main2,
 .ul-main3 {
   font-family: "Fredericka the Great", cursive;
+}
+.ul-main1 {
+  max-height: 140px;
 }
 
 .span-temp2 {
