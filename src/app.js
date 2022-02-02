@@ -13,6 +13,11 @@ function showTemperature(response) {
     "src",
     `http://openweathermap.org/img/wn/${icon}@2x.png`
   );
+
+  celsiusTemperature = response.data.main.temp;
+  celsiusMin = response.data.main.temp_min;
+  celsiusMax = response.data.main.temp_max;
+
   let temperature = Math.round(response.data.main.temp);
   let tempCelsius = document.querySelector("#temp-celsius");
   tempCelsius.innerHTML = temperature;
@@ -114,6 +119,11 @@ function findCity(event) {
       `http://openweathermap.org/img/wn/${icon}@2x.png`
     );
     iconElement.setAttribute("alt", response.data.weather[0].description);
+
+    celsiusTemperature = response.data.main.temp;
+    celsiusMin = response.data.main.temp_min;
+    celsiusMax = response.data.main.temp_max;
+
     let temperature = Math.round(response.data.main.temp);
     let tempCelsius = document.querySelector("#temp-celsius");
     tempCelsius.innerHTML = temperature;
@@ -245,6 +255,12 @@ function showPosition(position) {
       `http://openweathermap.org/img/wn/${icon}@2x.png`
     );
     iconElement.setAttribute("alt", response.data.weather[0].description);
+
+    celsiusTemperature = response.data.main.temp;
+
+    celsiusMin = response.data.main.temp_min;
+    celsiusMax = response.data.main.temp_max;
+
     let temperature = Math.round(response.data.main.temp);
     let tempCelsius = document.querySelector("#temp-celsius");
     tempCelsius.innerHTML = temperature;
@@ -332,41 +348,51 @@ button.addEventListener("click", getCurrentPosition);
 
 function convertToFahrenheit(event) {
   event.preventDefault();
-  let searchInput = document.querySelector("#search-input");
-  let city = searchInput.value;
-  let apiKey = "017e2b9ce8d67142382f8330fbc647cf";
-  let unit = "imperial";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=${apiKey}`;
-  axios.get(apiUrl).then(showTemperature);
-  function showTemperature(response) {
-    let icon = response.data.weather[0].icon;
-    let iconElement = document.querySelector("#icon");
-    iconElement.setAttribute(
-      "src",
-      `http://openweathermap.org/img/wn/${icon}@2x.png`
-    );
-    iconElement.setAttribute("alt", response.data.weather[0].description);
-    let temperature = Math.round(response.data.main.temp);
-    let tempFahrenheit = document.querySelector("#temp-celsius");
-    tempFahrenheit.innerHTML = temperature;
-    let description = document.querySelector("li.li-descript");
-    description.innerHTML = response.data.weather[0].description;
-    let minimum = document.querySelector("#min-temp");
-    minimum.innerHTML = Math.round(response.data.main.temp_min);
-    let maximum = document.querySelector("#max-temp");
-    maximum.innerHTML = Math.round(response.data.main.temp_max);
-    let minimumimperial = document.querySelector("#imperial-min");
-    minimumimperial.innerHTML = "°F";
-    let maximumimperial = document.querySelector("#imperial-max");
-    maximumimperial.innerHTML = "°F";
-    let humidity = document.querySelector("#humidity");
-    humidity.innerHTML = Math.round(response.data.main.humidity);
-    let wind = document.querySelector("#wind");
-    wind.innerHTML = Math.round(response.data.wind.speed);
-    let windimperial = document.querySelector("#imperial-wind");
-    windimperial.innerHTML = "mph";
-  }
+
+  let temperatureElement = document.querySelector("#temp-celsius");
+
+  fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+  celsiuslink.classList.remove("active");
+  fahrenheitlink.classList.add("active");
+
+  let celsiusElementMin = document.querySelector("#min-temp");
+  fahrenheitMin = (celsiusMin * 9) / 5 + 32;
+  celsiusElementMin.innerHTML = Math.round(fahrenheitMin);
+  let celsiusElementMax = document.querySelector("#max-temp");
+  fahrenheitMax = (celsiusMax * 9) / 5 + 32;
+  celsiusElementMax.innerHTML = Math.round(fahrenheitMax);
+
+  let unitElementMin = document.querySelector("#imperial-min");
+  unitElementMin.innerHTML = "°F";
+  let unitElementMax = document.querySelector("#imperial-max");
+  unitElementMax.innerHTML = "°F";
 }
+
+function convertToCelsius(event) {
+  event.preventDefault();
+
+  let temperatureElement = document.querySelector("#temp-celsius");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  celsiuslink.classList.add("active");
+  fahrenheitlink.classList.remove("active");
+  let celsiusElementMin = document.querySelector("#min-temp");
+
+  celsiusElementMin.innerHTML = Math.round(celsiusMin);
+  let celsiusElementMax = document.querySelector("#max-temp");
+  celsiusElementMax.innerHTML = Math.round(celsiusMax);
+  let unitElementMin = document.querySelector("#imperial-min");
+  unitElementMin.innerHTML = "°C";
+  let unitElementMax = document.querySelector("#imperial-max");
+  unitElementMax.innerHTML = "°C";
+}
+
+let celsiusTemperature = null;
+let celsiusMin = null;
+let celsiusMax = null;
 
 let fahrenheitlink = document.querySelector("#fah-link");
 fahrenheitlink.addEventListener("click", convertToFahrenheit);
+
+let celsiuslink = document.querySelector("#celsius-link");
+celsiuslink.addEventListener("click", convertToCelsius);

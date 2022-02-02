@@ -48,6 +48,12 @@ div.container-3 {
   margin: 0;
 }
 
+div.container-2 .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
 div.container-3 {
   max-width: 700px;
   max-height: 180px;
