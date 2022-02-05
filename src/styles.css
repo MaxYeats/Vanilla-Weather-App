@@ -36,12 +36,10 @@ div.container-1 {
   border: 1px solid #606470;
   padding: 15px;
   margin: 80px 100px;
-
   border-radius: 16px;
   max-width: 800px;
 }
-div.container-2,
-div.container-3 {
+div.container-2 {
   max-width: 700px;
   max-height: 180px;
   padding: 25px 20px;
@@ -54,11 +52,27 @@ div.container-2 .active {
   text-decoration: none;
 }
 
-div.container-3 {
+div.weather-forecast {
   max-width: 700px;
   max-height: 180px;
   padding: 20px;
   margin: 0;
+  text-align: center;
+
+  border: transparent;
+}
+div.weather-forecast-date {
+  font-family: "Fredericka the Great", cursive;
+  font-size: 15px;
+  opacity: 0.8;
+}
+#icon-forecast {
+  zoom: 100%;
+}
+div.weather-forecast-temperatures {
+  font-family: "Fredericka the Great", cursive;
+  font-size: 15px;
+  opacity: 0.8;
 }
 
 .enter {
@@ -131,20 +145,6 @@ ul {
   font-size: 16px;
   margin: 0 auto;
   padding: 20px 80px;
-}
-
-.card {
-  font-family: "Fredericka the Great", cursive;
-  border: transparent;
-}
-
-.p.card-title {
-  opacity: 0.8;
-  font-size: 15px;
-}
-.p.card-text {
-  opacity: 0.8;
-  font-size: 15px;
 }
 
 .monet {
