@@ -23,6 +23,7 @@ function showTemperature(response) {
   tempCelsius.innerHTML = temperature;
   let description = document.querySelector("li.li-descript");
   description.innerHTML = response.data.weather[0].description;
+
   let minimum = document.querySelector("#min-temp");
   minimum.innerHTML = Math.round(response.data.main.temp_min);
   let maximum = document.querySelector("#max-temp");
@@ -99,6 +100,7 @@ function showTemperature(response) {
     timedisplay.innerHTML = `${localhour}:${localminute}`;
   }
   getForecast(response.data.coord);
+  changeBackgroundImage(response.data.weather[0]);
 }
 
 function findCity(event) {
@@ -206,6 +208,7 @@ function findCity(event) {
       timedisplay.innerHTML = `${localhour}:${localminute}`;
     }
     getForecast(response.data.coord);
+    changeBackgroundImage(response.data.weather[0]);
   }
 }
 
@@ -322,6 +325,7 @@ function showPosition(position) {
       timedisplay.innerHTML = `${hour}:${minute}`;
     }
     getForecast(response.data.coord);
+    changeBackgroundImage(response.data.weather[0]);
   }
 
   let apiAQI = `https://api.openweathermap.org/data/2.5/air_pollution?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
@@ -449,4 +453,52 @@ function getForecast(coordinates) {
   let apiKey = "017e2b9ce8d67142382f8330fbc647cf";
   let apiForecast = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&units=metric&exclude={current,alerts}&appid=${apiKey}`;
   axios.get(apiForecast).then(displayForecast);
+}
+
+function changeBackgroundImage(forbackground) {
+  let iconbackground = forbackground.icon;
+
+  if (iconbackground === "01d" || iconbackground === "01n") {
+    document.body.style.backgroundImage = "url(src/img/Sunny2.JPG)";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundSize = "cover";
+  }
+
+  if (iconbackground === "02d" || iconbackground === "02n") {
+    document.body.style.backgroundImage = "url(src/img/Partiallycloudy.JPG)";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundSize = "cover";
+  }
+  if (
+    iconbackground === "03d" ||
+    iconbackground === "03n" ||
+    iconbackground === "04d" ||
+    iconbackground === "04n"
+  ) {
+    document.body.style.backgroundImage = "url(src/img/Cloudy.JPG)";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundSize = "cover";
+  }
+  if (
+    iconbackground === "09d" ||
+    iconbackground === "09n" ||
+    iconbackground === "10d" ||
+    iconbackground === "10n" ||
+    iconbackground === "11d" ||
+    iconbackground === "11n"
+  ) {
+    document.body.style.backgroundImage = "url(src/img/Rain.JPG)";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundSize = "cover";
+  }
+  if (iconbackground === "13d" || iconbackground === "13n") {
+    document.body.style.backgroundImage = "url(src/img/Snow.JPG)";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundSize = "cover";
+  }
+  if (iconbackground === "50d" || iconbackground === "50n") {
+    document.body.style.backgroundImage = "url(src/img/Fog.JPG)";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundSize = "cover";
+  }
 }

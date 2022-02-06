@@ -38,6 +38,8 @@ div.container-1 {
   margin: 80px 100px;
   border-radius: 16px;
   max-width: 750px;
+  background-color: rgba(255, 255, 255, 40%);
+  font-weight: 450;
 }
 div.container-2 {
   max-width: 700px;
@@ -56,23 +58,23 @@ div.weather-forecast {
   max-width: 700px;
   max-height: 180px;
   padding: 20px;
-  margin: 0;
+
   text-align: center;
 
   border: transparent;
 }
 div.weather-forecast-date {
   font-family: "Fredericka the Great", cursive;
-  font-size: 15px;
-  opacity: 0.8;
+  font-size: 18px;
+  font-weight: bold;
 }
 #icon-forecast {
   zoom: 100%;
 }
 div.weather-forecast-temperatures {
   font-family: "Fredericka the Great", cursive;
-  font-size: 15px;
-  opacity: 0.8;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .enter {
@@ -93,7 +95,7 @@ ul {
 .li-city {
   font-family: "Fredericka the Great", cursive;
   font-size: 65px;
-  opacity: 0.6;
+
   padding: 0 0 0 30px;
   text-align: left;
   margin-bottom: 0;
@@ -103,8 +105,9 @@ ul {
 .li-time {
   font-family: "Fredericka the Great", cursive;
   font-size: 18px;
+  font-weight: 700;
   text-align: left;
-  opacity: 0.8;
+
   padding: 0 30px;
 }
 
@@ -119,15 +122,13 @@ ul {
 
 .span-temp2 {
   font-family: "Fredericka the Great", cursive;
-  opacity: 0.5;
+
   font-size: 20px;
   position: relative;
   top: -30px;
 }
 .span-temp1 {
-  font-size: 75px;
-  font-family: "Fredericka the Great", cursive;
-  opacity: 0.5;
+  font-size: 70px;
 }
 
 .li-temp {
@@ -138,17 +139,19 @@ ul {
 .li-descript {
   text-align: center;
   font-size: 20px;
+  font-weight: 600;
   text-transform: capitalize;
 }
 
 .ul-main3 {
   font-size: 16px;
+  font-weight: 600;
   margin: 0 auto;
   padding: 20px 80px;
 }
 
 .monet {
-  font-size: 7px;
+  font-size: 10px;
   font-family: Arial, Helvetica, sans-serif;
   border-width: 1px;
   display: block;
@@ -159,4 +162,5 @@ ul {
   font-family: Arial, Helvetica, sans-serif;
   padding-left: 20px;
   padding-bottom: 15px;
+  font-weight: 700;
 }
