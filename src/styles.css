@@ -5,24 +5,32 @@
 }
 
 #search-input {
-  border-radius: 2%;
-  border-width: 0.5px;
+  border-radius: 3px;
+
   font-style: italic;
   font-family: Arial, Helvetica, sans-serif;
+  border: 0.7px groove grey;
+
+  box-shadow: 3px 2px 2px rgb(112, 115, 117);
 }
 
 #current-button {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
-  border-width: 1px;
+  color: aliceblue;
   padding: 2px 6px;
-  border-radius: 7%;
+  border-radius: 8%;
+  background-color: rgba(17, 46, 70, 0.8);
+  border: 0.7px groove grey;
+  box-shadow: 3px 2px 2px rgb(112, 115, 117);
 }
 #search-button {
-  border-width: 1px;
   padding: 2px 6px;
-  border-radius: 7%;
+  border-radius: 3px;
   font-size: 15px;
+  background-color: rgba(243, 248, 252, 80%);
+  border: 0.7px groove grey;
+  box-shadow: 3px 2px 2px rgb(112, 115, 117);
 }
 div.container-1 {
   max-height: 120px;
@@ -33,7 +41,7 @@ div.container-1 {
   zoom: 120%;
 }
 .container {
-  border: 1px transparent #606470;
+  border: 0.5px transparent;
   padding: 15px;
   margin: 80px 100px;
   border-radius: 16px;
@@ -95,7 +103,6 @@ ul {
 .li-city {
   font-family: "Fredericka the Great", cursive;
   font-size: 65px;
-
   padding: 0 0 0 30px;
   text-align: left;
   margin-bottom: 0;
@@ -153,9 +160,13 @@ ul {
 .monet {
   font-size: 10px;
   font-family: Arial, Helvetica, sans-serif;
-  border-width: 1px;
+  color: aliceblue;
   display: block;
   margin: 0 auto 15px;
+  background-color: rgba(17, 46, 70, 0.8);
+  border: 0.7px groove grey;
+  box-shadow: 3px 2px 2px rgb(112, 115, 117);
+  border-radius: 15px;
 }
 .github-link {
   font-size: 12px;
