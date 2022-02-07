@@ -57,8 +57,18 @@ div.container-2 {
 }
 
 div.container-2 .active {
-  color: black;
+  color: rgb(35, 35, 35);
   cursor: default;
+}
+
+div.container-2 .active:hover {
+  text-decoration: none;
+}
+
+#celsius-link {
+  text-decoration: none;
+}
+#fah-link {
   text-decoration: none;
 }
 
