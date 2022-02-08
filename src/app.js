@@ -37,7 +37,7 @@ function showTemperature(response) {
   let wind = document.querySelector("#wind");
   wind.innerHTML = Math.round(response.data.wind.speed);
   let windmetric = document.querySelector("#imperial-wind");
-  windmetric.innerHTML = "km/h";
+  windmetric.innerHTML = "m/s";
   let latitude = response.data.coord.lat;
   let longitude = response.data.coord.lon;
   let apiAQI = `https://api.openweathermap.org/data/2.5/air_pollution?lat=${latitude}&lon=${longitude}&units=${unit}&appid=${apiKey}`;
@@ -145,7 +145,7 @@ function findCity(event) {
     let wind = document.querySelector("#wind");
     wind.innerHTML = Math.round(response.data.wind.speed);
     let windmetric = document.querySelector("#imperial-wind");
-    windmetric.innerHTML = "km/h";
+    windmetric.innerHTML = "m/s";
     let latitude = response.data.coord.lat;
     let longitude = response.data.coord.lon;
     let apiAQI = `https://api.openweathermap.org/data/2.5/air_pollution?lat=${latitude}&lon=${longitude}&units=${unit}&appid=${apiKey}`;
@@ -284,7 +284,7 @@ function showPosition(position) {
     let wind = document.querySelector("#wind");
     wind.innerHTML = Math.round(response.data.wind.speed);
     let windmetric = document.querySelector("#imperial-wind");
-    windmetric.innerHTML = "km/h";
+    windmetric.innerHTML = "m/s";
 
     let now = new Date();
     currentDate(now);
