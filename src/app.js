@@ -115,7 +115,7 @@ function findCity(event) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=${apiKey}`;
   axios.get(apiUrl).then(showTemperature);
 
-  //Correction: whenever finding a new city, if previous city temperature was in F, new city displays temperature correctly in C but icon C remains blue, so I'm adding "active" to C to make it black ("active").
+  //Correction: whenever finding a new city, if previous city temperature was in F, new city displays temperature correctly in C but icon C remains blue, so I'm adding "active" to C to make it black and removing "active" from F to make it blue.
   let celsiuslink = document.querySelector("#celsius-link");
   celsiuslink.classList.add("active");
   let fahrenheitlink = document.querySelector("#fah-link");
