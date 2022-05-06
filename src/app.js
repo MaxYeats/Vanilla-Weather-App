@@ -107,8 +107,7 @@ function findCity(event) {
   event.preventDefault();
 
   let searchInput = document.querySelector("#search-input");
-  let citydisplay = document.querySelector("li.li-city");
-  citydisplay.innerHTML = `${searchInput.value}`;
+
   let city = searchInput.value;
   let apiKey = "017e2b9ce8d67142382f8330fbc647cf";
   let unit = "metric";
@@ -122,6 +121,9 @@ function findCity(event) {
   fahrenheitlink.classList.remove("active");
 
   function showTemperature(response) {
+    let citydisplay = document.querySelector("li.li-city");
+    citydisplay.innerHTML = response.data.name;
+
     let icon = response.data.weather[0].icon;
     let iconElement = document.querySelector("#icon");
     iconElement.setAttribute(
